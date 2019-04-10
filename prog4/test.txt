@@ -1,0 +1,5 @@
+var x 0;
+var y 3;
+var z "Fredy";
+
+repeat (4 * 2) print z[x:y];

@@ -1,0 +1,47 @@
+VAR
+IDENT(Foo)
+ICONST(13)
+SC
+VAR
+IDENT(Bar)
+SCONST(hidey ho! # )
+SC
+SET
+IDENT(z)
+ICONST(1)
+ICONST(2)
+ICONST(3)
+IDENT(a34)
+ICONST(34)
+IDENT(mmm)
+PLUS
+ICONST(3)
+PLUS
+STAR
+STAR
+STAR
+SCONST(hokey smoke, bullwinkle!)
+IDENT(z)
+IDENT(z)
+PLUS
+IDENT(z)
+SC
+SC
+SC
+SC
+SC
+IDENT(z)
+LSQ
+IDENT(z)
+LSQ
+IDENT(z)
+STAR
+ICONST(4)
+COLON
+ICONST(3)
+MINUS
+ICONST(3)
+RSQ
+ICONST(-12)
+SCONST(yeah)
+Most Common Identifier: z

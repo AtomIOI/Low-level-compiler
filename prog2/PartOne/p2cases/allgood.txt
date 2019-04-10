@@ -1,0 +1,6 @@
+var x 3 17 104 "yes" #no "help me please
+
+3 + 2 * 5 - x - -72 ;
+[ 2 : 3 ] print "this"; and ( 2 * ( 2 + 2 - 2 * ( [2] ))
+
+woot

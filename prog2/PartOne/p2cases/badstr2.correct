@@ -1,0 +1,8 @@
+IDENT(this)
+IDENT(is)
+SCONST(ok)
+IDENT(but)
+IDENT(this)
+IDENT(is)
+Error on line 3 ("quite bad
+)

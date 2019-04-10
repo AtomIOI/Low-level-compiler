@@ -1,0 +1,70 @@
+ex=~/prog2
+
+cd $LIB/public/p2
+
+[ ! -e $ex ] && echo Cannot find the program, please build it! && exit 1
+
+printonly=no
+[ "$1" = "-v" ] && printonly=yes && shift
+
+declare -A cases
+cases[badarg]="-nosuch"
+cases[badfile]="noSuchFile"
+cases[manyfiles]="good.txt noSuchFile"
+cases[badstr1]="badstr.txt"
+cases[badstr2]="-v badstr.txt"
+cases[empty1]="empty.txt"
+cases[comments1]="-v comments.txt"
+cases[good1]="good.txt"
+cases[good2]="-v good.txt"
+cases[allgood1]="allgood.txt"
+cases[allgood2]="-v allgood.txt"
+cases[mci1]="-mci -v extended.txt"
+cases[mci2]=" -sum extended.txt"
+cases[mci3]="-mci -sum extended.txt"
+cases[oddbad]="-sum -v -mci oddbad.txt"
+
+args=""
+if [ $# -eq 1 ];
+then
+	if [ ${cases[$1]+_} ];
+	then
+		args=${cases[$1]}
+	fi
+fi
+
+if [ "$args" = "" ];
+then
+	echo Case $1 not found
+	echo
+	echo Test cases are:
+	for v in "${!cases[@]}" ;
+	do
+		echo $v: prog2 ${cases[$v]}
+	done
+	exit 0
+fi
+
+ofile=`mktemp`
+
+[ $printonly = "yes" ] && echo prog2 $args && exit
+
+echo RUNNING prog2 $args
+
+score=0
+
+eval $ex $args 2>&1 | tee $ofile
+
+diff $ofile ${1}.correct
+
+rc=$?
+
+[ $rc -eq 0 ] && score=1
+
+echo RESULT: $1 "[ " $score " / 1 ]"
+
+rm $ofile
+
+exit $rc
+
+

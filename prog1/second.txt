@@ -1,0 +1,13 @@
+this line has nothing
+but     this        line         needs a squish
+this     also with extra newlines
+
+
+and this      has evil spaces at end
+and this     has spaces AND a skip 
+this has spaces and extra skips     
+
+
+
+
+done

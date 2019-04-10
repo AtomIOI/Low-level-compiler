@@ -1,0 +1,11 @@
+var Foo 13;
+
+var           Bar  "hidey ho! # " # fun stuff
+
+;
+
+set z 1 2 3 a34 34 mmm + 3 + * * * "hokey smoke, bullwinkle!" z z + z ; ;;;; z[z[z * 4:3 - 3]
+
+-12
+
+"yeah"
